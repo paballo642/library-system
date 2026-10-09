@@ -1,0 +1,407 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: lavender;
+  color: black;
+}
+
+/* ================= BUTTONS ================= */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: indigo;
+}
+
+/* ================= INPUTS ================= */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid purple;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid purple;
+}
+
+/* ================= LABELS ================= */
+label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* ================= LOGIN ================= */
+#loginSection {
+  min-height: 100vh;
+  background-color: indigo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-card {
+  width: 380px;
+  max-width: 100%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px gray;
+}
+
+.login-card h1 {
+  text-align: center;
+  color: purple;
+  margin: 0 0 5px;
+  font-size: 38px;
+}
+
+.login-card h2 {
+  text-align: center;
+  color: gray;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0 0 25px;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-card form label:not(.show-password) {
+  margin-top: 8px;
+}
+
+.show-password {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 6px;
+  margin-top: 8px !important;
+}
+
+.show-password input {
+  width: auto !important;
+  margin: 0;
+}
+
+.login-button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 11px;
+  background-color: purple;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: indigo;
+}
+
+#loginMessage {
+  color: red;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ================= HEADER ================= */
+header {
+  background-color: purple;
+  color: white;
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;          /* reduced so it doesn't break */
+  white-space: nowrap;      /* prevents ugly wrapping */
+  line-height: 1.2;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.header-user p {
+  margin: 0;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+header button {
+  background-color: white;
+  color: purple;
+  white-space: nowrap;
+}
+
+header button:hover {
+  background-color: lavender;
+  color: indigo;
+}
+
+/* ================= NAVIGATION ================= */
+nav {
+  background-color: indigo;
+  padding: 10px 25px;
+  display: flex;
+  gap: 20px;
+}
+
+nav button {
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+}
+
+nav button:hover {
+  background-color: purple;
+}
+
+/* ================= PAGE ================= */
+#content {
+  padding: 30px;
+  min-height: calc(100vh - 120px);
+}
+
+.page-heading {
+  margin-bottom: 25px;
+}
+
+.page-heading h2 {
+  color: purple;
+  font-size: 36px;
+  margin: 0;
+}
+
+/* ================= DASHBOARD ================= */
+#statistics {
+  display: flex;
+  gap: 25px;
+  margin: 20px 0 30px;
+}
+
+.stat-card {
+  background-color: white;
+  width: 100%;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 8px gray;
+}
+
+.stat-card h3 {
+  color: gray;
+  font-size: 22px;
+  margin: 0 0 15px;
+}
+
+.stat-card p {
+  color: purple;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ================= CARDS ================= */
+.content-card,
+.book-form-card {
+  background-color: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px gray;
+}
+
+.content-card h3,
+.book-form-card h3 {
+  color: purple;
+  font-size: 26px;
+  margin: 0 0 20px;
+}
+
+/* ================= FORMS ================= */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 25px;
+  align-items: center;
+}
+
+.form-group {
+  display: contents;
+}
+
+.primary-action {
+  background-color: purple;
+  color: white;
+  margin-top: 15px;
+}
+
+.primary-action:hover {
+  background-color: indigo;
+}
+
+/* ================= TRANSACTION FORM ================= */
+.transaction-form-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 15px 25px;
+  align-items: center;
+}
+
+/* ================= TABLES ================= */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 10px;
+}
+
+th {
+  background-color: purple;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+td {
+  padding: 12px;
+  border: 1px solid lavender;
+  font-size: 16px;
+}
+
+tr:hover {
+  background-color: lavender;
+}
+
+.low-stock {
+  background-color: pink !important;
+  font-weight: bold;
+}
+
+table button {
+  padding: 7px 10px;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+/* ================= SPECIAL CARDS ================= */
+.books-table-card,
+.transaction-history-card,
+.user-table-card {
+  background-color: transparent;
+  padding: 0;
+  margin-top: 30px;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.books-table-card > h3,
+.transaction-history-card > h3,
+.user-table-card > h3 {
+  color: purple;
+  font-size: 26px;
+  margin: 0 0 20px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  header h1 {
+    font-size: 26px;
+    white-space: normal;
+  }
+
+  .header-user {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav button {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  #statistics {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid,
+  .transaction-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-card {
+    width: 95%;
+    padding: 25px 20px;
+  }
+
+  #content {
+    padding: 15px;
+  }
+
+  .content-card,
+  .book-form-card {
+    padding: 18px;
+  }
+
+  .page-heading h2 {
+    font-size: 28px;
+  }
+
+  .stat-card p {
+    font-size: 28px;
+  }
+
+  table {
+    min-width: 650px;
+  }
+}
